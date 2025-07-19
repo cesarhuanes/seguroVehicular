@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+
+    db:
+      image: postgres:16.1
+      container_name: db-seguro-vehiculo
+      restart: always
+      volumes:
+        - ./sql/create_schema.sql:/docker-entrypoint-initdb.d/create_schema.sql
+        - ./sql/data.sql:/docker-entrypoint-initdb.d/data.sql
+      environment:
+        POSTGRES_DB: 'seguro-vehiculo'
+        POSTGRES_USER: 'seguro'
+        POSTGRES_PASSWORD: 'seguro'
+      ports:
+        - '5432:5432'

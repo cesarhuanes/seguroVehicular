@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: seguro-vehicular
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/seguro-vehiculo
+    username: seguro
+    password: seguro
+
+server:
+  port: 8080
