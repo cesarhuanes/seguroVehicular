@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "040930c2-ff65-402e-8b82-13dd829599f5",
+		"name": "SeguroVehiculo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15472220"
+	},
+	"item": [
+		{
+			"name": "Lista Vehiculos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/insurance/vehicles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"insurance",
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guarda Vehiculo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"brand\": \"Toyota\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2022,\r\n  \"usage\": \"personal\",\r\n  \"driverAge\": 32,\r\n  \"createdAt\": \"2024-07-01T14:30:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/insurance/vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"insurance",
+						"vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Simular Vehiculo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\": 7, \r\n  \"brand\": \"Toyota\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2022,\r\n  \"usage\": \"personal\",\r\n  \"driverAge\": 32,\r\n  \"createdAt\": \"2024-07-01T14:30:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/insurance/simulate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"insurance",
+						"simulate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Simulaciones",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/insurance/simulations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"insurance",
+						"simulations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualiza Vehiculo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"brand\": \"Toyota\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2023,\r\n  \"usage\": \"personal\",\r\n  \"driverAge\": 33,\r\n  \"createdAt\": \"2024-07-01T14:30:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/insurance/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"insurance",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Elimina Vehiculo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/insurance/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"insurance",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
